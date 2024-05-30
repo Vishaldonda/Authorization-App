@@ -1,6 +1,6 @@
 const GitHubStrategy = require('passport-github2').Strategy;
 const mongoose = require('mongoose');
-const User = mongoose.model('User');
+const User = require('../models/User'); // Import the User model
 
 module.exports = (passport) => {
   passport.use(new GitHubStrategy({

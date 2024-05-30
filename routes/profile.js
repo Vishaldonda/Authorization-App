@@ -4,16 +4,16 @@ const { getUserProfile, updateUserProfile, getPublicProfiles, getAllProfiles } =
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
 
-// Get current user's profile
-router.get('/profile', auth, getUserProfile);
+// Get user profile
+router.get('/me', auth, getUserProfile);
 
-// Update current user's profile
-router.put('/profile', auth, updateUserProfile);
+// Update user profile
+router.put('/me', auth, updateUserProfile);
 
 // Get all public profiles
 router.get('/public', getPublicProfiles);
 
-// Admin route to get all profiles
+// Get all profiles (admin only)
 router.get('/all', auth, admin, getAllProfiles);
 
 module.exports = router;

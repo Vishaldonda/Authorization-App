@@ -65,4 +65,3 @@ exports.logoutUser = (req, res) => {
     res.json({ message: 'User logged out' });
 };
 
-// Handlers for social logins to be added here
